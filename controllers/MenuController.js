@@ -52,4 +52,8 @@ module.exports = class MenuController {
     process.exit();
   }
 
+  getContactCount(){
+    return this.contacts.length;
+  }
+
 }
