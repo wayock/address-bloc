@@ -57,8 +57,9 @@ module.exports = class MenuController {
   }
 
   getDate(){
-    var currdatetime = new Date();
-    console.log(currdatetime);
+    var currentDayOfWeek = new Date().toLocaleString('en-US', {weekday: 'long'});
+    var currentDateTime = new Date().toLocaleString('en-US',  { timeZone: 'America/New_York' });
+    console.log(currentDayOfWeek + " " + currentDateTime);
     this.main();
   }
 
