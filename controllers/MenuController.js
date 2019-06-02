@@ -57,9 +57,21 @@ module.exports = class MenuController {
   }
 
   getDate(){
+    /* Can format date this way:
     var currentDayOfWeek = new Date().toLocaleString('en-US', {weekday: 'long'});
-    var currentDateTime = new Date().toLocaleString('en-US',  { timeZone: 'America/New_York' });
-    console.log(currentDayOfWeek + " " + currentDateTime);
+    var currentDateTime = new Date().toLocaleString('en-US');
+    console.log(`${currentDayOfWeek} ${currentDateTime}`);
+    Or the following way:
+    */
+    var time = new Date().toLocaleString('en-US', {
+      hour: '2-digit',
+      minute: '2-digit',
+      weekday: 'long',
+      day: 'numeric',
+      month: 'numeric',
+      year: 'numeric',
+    });
+    console.log(time)
     this.main();
   }
 
