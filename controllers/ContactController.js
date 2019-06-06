@@ -25,7 +25,7 @@ module.exports = class ContactController {
   }
 
   addContact(name, phone){
-    return Contact.create({name, phone});
+    return Contact.create({name, phone, email});
   }
 
   getContacts(){
